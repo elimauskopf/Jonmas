@@ -1,0 +1,43 @@
+/* .jon {
+    width: 100%;
+    height: auto;
+} */
+
+@media (width <= 500px) {
+
+    body {
+        background-image: url('jon.jpg');
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: 100%;
+    }
+}
+
+@media (width > 500px) {
+    body {
+        background-image: url('jon.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 100%;
+    }
+}
+
+
+#date {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5vw;
+    background-color: white;
+    width: 60%;
+    padding: 5px;
+    margin: 5px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+
+}

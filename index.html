@@ -1,0 +1,51 @@
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <script>
+
+    const birthday = new Date("December 12, 2026 00:00:00").getTime(); 
+    let x = setInterval(function() {
+        
+        let now = new Date().getTime();
+
+        let distance = birthday - now;
+
+        console.log(distance);
+
+          // Time calculations for days, hours, minutes and seconds
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+        document.getElementById("date").innerHTML = days + " days " + hours + " hours " + minutes + " minutes "
+        + seconds + " seconds " + "till Jonmas";
+
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("date").innerHTML = "MERRY JONMAS";
+        }
+
+    }, 1000)
+    
+    
+
+    </script>
+    <style type="text/css">body { cursor: url('cursor.cur'), auto; }</style>
+</head>
+<body>
+    <div class="container">
+        <!-- <img src="jon.jpg" class="jon"> -->
+        <h1 id="date"> </h1>
+        <img src="Snowfall.gif " alt="snow falling">
+    </div>
+    
+
+</body>
+</html>
+
+
+
+    
+
